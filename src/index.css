@@ -1,0 +1,32 @@
+/* Load Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+@import "tailwindcss";
+
+/* Define your theme values */
+@theme {
+  --color-brand: #00aeef;
+}
+
+/* Apply the font globally */
+@layer base {
+  body {
+    font-family: var(--font-poppins);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 25s linear infinite;
+}
+
