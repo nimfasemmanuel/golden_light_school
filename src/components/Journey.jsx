@@ -1,14 +1,15 @@
 import React from "react";
-import backgroundImage from "../assets/backgroundImage.jpg";
+
 
 const Journey = () => {
   return (
     <section
-      className="relative w-full h-[422px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 174, 239, 0.6)), url(${backgroundImage})`,
-      }}
-    >
+  className="relative w-full h-[422px] flex items-center justify-center bg-cover bg-center"
+  style={{
+    backgroundImage: "linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('/backgroundImage.jpg')",
+  }}
+>
+
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6">
         {/* Header */}
