@@ -1,67 +1,38 @@
 import React from "react";
-import { ContactForm, Navbar } from "./components";
-import { Hero } from "./components";
-import { About } from "./components";
-import { Academics } from "./components";
-import { Admission } from "./components";
-import { WhyChoose } from "./components"; 
-import { LatestNews } from "./components"; 
-import { Testimonials } from "./components"; 
-import Journey from "./components/Journey";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import Aboutpage from "./pages/Aboutpage";
+import Academicspage from "./pages/Academicspage";
+import Admissionpage from "./pages/Admissionpage";
+import Gallerypage from "./pages/Gallerypage";
+import Contactpage from "./pages/Contactpage";
 
 const App = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-white">
-      {/* Navbar (stays fixed) */}
-      <Navbar />
+    <Router>
+      <div className="flex flex-col min-h-screen bg-white">
+        {/* ✅ Navbar always visible */}
+        <Navbar />
 
-      {/* Page Sections */}
-      <div className="flex-1 w-full">
-        {/* 🏠 Home Section */}
-        <section id="home" className="scroll-mt-[90px]">
-          <Hero />
-        </section>
+        {/* ✅ Page content changes based on route */}
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<Aboutpage />} />
+            <Route path="/academics" element={<Academicspage />} />
+            <Route path="/admission" element={<Admissionpage />} />
+            <Route path="/gallery" element={<Gallerypage />} />
+            <Route path="/contact" element={<Contactpage />} />
+          </Routes>
+        </div>
 
-        {/* 👨‍🏫 About Section */}
-        <section id="about" className="scroll-mt-[90px]">
-          <About />
-        </section>
-
-        {/* 📚 Academics Section */}
-        <section id="academics" className="scroll-mt-[90px]">
-          <Academics />
-        </section>
-
-        {/* 📝 Admission Section */}
-        <section id="admission" className="scroll-mt-[90px]">
-          <Admission />
-        </section>
-
-        {/* 💡 Why Choose Us Section (optional) */}
-        <WhyChoose /> 
-
-        <LatestNews />
-        <Testimonials />
-        <section id="gallery" className="scroll-mt-[90px]">
-          <Journey />
-        </section> 
-        {/** 📞 Contact Section (Coming Soon)  */ } 
-        <section id="contact" className="scroll-mt-[90px]">
-          <ContactForm />
-        </section> 
+        {/* ✅ Footer always visible */}
         <Footer />
-
-        {/* 🖼️ Gallery Section (Coming Soon) */}
-        {/* <section id="gallery" className="scroll-mt-[90px]">
-          <h1 className="text-center text-2xl py-10 font-semibold">
-            Gallery Section (Coming Soon)
-          </h1>
-        </section> */}
-
-       
       </div>
-    </div>
+    </Router>
   );
 };
 

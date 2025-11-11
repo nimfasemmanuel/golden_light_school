@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { Link as ScrollLink } from "react-scroll"; // ✅ Use react-scroll for smooth scrolling
+import { Link } from "react-router-dom"; // ✅ use react-router for page routing
 import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // ✅ Paths now match section IDs (no route change)
+  // ✅ Now paths are routes, not scroll IDs
   const links = [
-    { name: "Home", path: "home" },
-    { name: "About us", path: "about" },
-    { name: "Academics", path: "academics" },
-    { name: "Admission", path: "admission" },
-    { name: "Gallery", path: "gallery" },
-    { name: "Contact", path: "contact" },
+    { name: "Home", path: "/" },
+    { name: "About us", path: "/about" },
+    { name: "Academics", path: "/academics" },
+    { name: "Admission", path: "/admission" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -24,41 +24,33 @@ const Navbar = () => {
           px-6 sm:px-10 md:px-[60px] lg:px-[100px] py-[20px] gap-[10px]
         "
       >
-        {/* Left: Logo */}
-        <ScrollLink
-          to="home"
-          smooth={true}
-          duration={600}
-          offset={-90}
-          className="cursor-pointer"
-        >
+        {/* Left: Logo (returns home) */}
+        <Link to="/" className="cursor-pointer">
           <img
             src={logo}
             alt="School Logo"
             className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] md:w-[64px] md:h-[63px] object-contain"
           />
-        </ScrollLink>
+        </Link>
 
         {/* Center: Desktop Links */}
         <ul className="hidden md:flex items-center gap-[30px] lg:gap-[40px]">
-          {links.map((link) => {
-            const isHome = link.name === "Home";
-            return (
-              <li key={link.name}>
-                <ScrollLink
-                  to={link.path}
-                  smooth={true}
-                  duration={600}
-                  offset={-90} // Adjust scroll stop
-                  className={`inline-block text-[16px] font-medium leading-[24px] px-3 py-1 rounded-md transition-all duration-300 cursor-pointer
-                    ${isHome ? "text-black" : "text-[#33333380]"} 
-                    hover:bg-[#00AEEF] hover:text-white active:opacity-80`}
-                >
-                  {link.name}
-                </ScrollLink>
-              </li>
-            );
-          })}
+          {links.map((link) => (
+            <li key={link.name}>
+              <Link
+                to={link.path}
+                className={`inline-block text-[16px] font-medium leading-[24px] px-3 py-1 rounded-md transition-all duration-300 cursor-pointer
+                  ${
+                    link.path === "/"
+                      ? "text-black"
+                      : "text-[#33333380]"
+                  } 
+                  hover:bg-[#00AEEF] hover:text-white active:opacity-80`}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Right: Apply Button (Desktop) */}
@@ -82,24 +74,22 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-left gap-4 bg-white py-4 shadow-md">
-          {links.map((link) => {
-            const isHome = link.name === "Home";
-            return (
-              <ScrollLink
-                key={link.name}
-                to={link.path}
-                smooth={true}
-                duration={600}
-                offset={-90}
-                onClick={() => setMenuOpen(false)}
-                className={`text-[16px] font-medium leading-[24px] px-4 py-2 rounded-md transition-all duration-300 cursor-pointer
-                  ${isHome ? "text-black" : "text-[#33333380]"} 
-                  hover:bg-[#00AEEF] hover:text-white active:opacity-80`}
-              >
-                {link.name}
-              </ScrollLink>
-            );
-          })}
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              onClick={() => setMenuOpen(false)} // close after click
+              className={`text-[16px] font-medium leading-[24px] px-4 py-2 rounded-md transition-all duration-300 cursor-pointer
+                ${
+                  link.path === "/"
+                    ? "text-black"
+                    : "text-[#33333380]"
+                } 
+                hover:bg-[#00AEEF] hover:text-white active:opacity-80`}
+            >
+              {link.name}
+            </Link>
+          ))}
           <button className="cursor-pointer px-[24px] py-[10px] bg-[#00AEEF] text-white text-[16px] font-semibold rounded-md transition-all duration-300 hover:bg-[#0095cc] hover:shadow-md active:opacity-80">
             Apply Now
           </button>

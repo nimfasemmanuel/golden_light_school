@@ -1,10 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion }   from "framer-motion";
 import family from "../assets/family.svg";
 
 const About = () => {
   return (
-    <section className="w-full flex justify-center py-[60px] sm:py-[80px] md:py-[100px] px-[16px] sm:px-[40px] md:px-[80px] bg-white">
+    <section className="w-full flex justify-center py-[60px] sm:py-[80px] md:py-[px] px-[16px] sm:px-[40px] md:px-[80px] bg-white">
       <div className="w-full max-w-[1440px] flex flex-col items-center gap-[40px]">
         {/* Header Text */}
         <motion.p
@@ -12,7 +12,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-[#003366] text-center font-poppins font-semibold text-[24px] sm:text-[28px] md:text-[36px] leading-[36px] sm:leading-[40px] max-w-[524px]"
+          className="text-[#003366] text-center font-poppins font-bold text-[24px] sm:text-[28px] md:text-[36px] leading-[36px] sm:leading-[40px] max-w-[524px] pt-[50px]"
         >
           About Golden Light School
         </motion.p>
@@ -73,9 +73,10 @@ const About = () => {
               <h1 className="font-poppins font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] mb-2 text-[#00AEEF]">
                 Our Story
               </h1>
-              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600">
+              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
+">
                 Founded in 2000, Golden Light School has been a cornerstone of
-                educational excellence in our community for over 35 years. Our
+                educational excellence in our community for over 20 years. Our
                 commitment to academic rigor, character development, and holistic
                 education has made us one of the leading schools in the region.
               </p>
@@ -84,9 +85,23 @@ const About = () => {
             {/* Our Mission */}
             <div>
               <h1 className="font-poppins font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] mb-2 text-[#00AEEF]">
-                Our Mission
+                Mission
               </h1>
-              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600">
+              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
+">
+                We strive to provide a supportive and challenging educational
+                environment that empowers students to become thoughtful,
+                responsible, and successful citizens prepared for the challenges
+                of higher education and beyond.
+              </p>
+            </div>  
+               {/* Our Vision */}
+            <div>
+              <h1 className="font-poppins font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] mb-2 text-[#00AEEF]">
+                Vision
+              </h1>
+              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
+">
                 We strive to provide a supportive and challenging educational
                 environment that empowers students to become thoughtful,
                 responsible, and successful citizens prepared for the challenges

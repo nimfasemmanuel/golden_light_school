@@ -23,10 +23,10 @@ const Academics= () => {
     >
       {/* --- Section Header --- */}
       <div className="flex flex-col items-center text-center gap-[10px]">
-        <h1 className="text-[32px] leading-[40px] font-poppins font-semibold text-[#003366] text-center max-w-[733px]">
+        <h1 className="text-[32px] leading-[40px] font-poppins font-semibold text-[#003366] text-center max-w-[733px] ">
           Our Academic Programs
         </h1>
-        <p className="text-[18px] leading-[26px] font-poppins font-normal text-center max-w-[733px] text-[#003366]">
+        <p className="text-[18px] leading-[26px] font-poppins font-normal text-center max-w-[733px] text-[#003366] ">
           Discover our comprehensive educational offerings designed to develop
           well-rounded students prepared for future success.
         </p>
@@ -34,7 +34,7 @@ const Academics= () => {
       </div>
 
       {/* --- Academic Programs Cards --- */}
-      <div className="w-full max-w-[1240px] flex flex-wrap justify-center gap-[20px] pt-[50px]">
+      <div className="w-full max-w-[1440px] flex flex-wrap justify-between gap-[20px] pt-[50px]">
         {[
           {
             icon: book,
@@ -59,7 +59,7 @@ const Academics= () => {
         ].map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center gap-[10px] bg-[#E6F7FB] shadow-sm rounded-xl p-6 w-[280px] sm:w-[45%] md:w-[45%] lg:w-[280px] cursor-pointer transform transition-all duration-300 hover:scale-105"
+            className="flex flex-col items-center text-center gap-[10px] bg-[#E6F7FB] shadow-sm rounded-xl p-6 w-[280px] sm:w-[90%] md:w-[45%] lg:w-[280px] cursor-pointer transform transition-all duration-300 hover:scale-105"
           >
             <img
               src={card.icon}

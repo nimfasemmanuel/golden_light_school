@@ -22,7 +22,7 @@ const Hero = () => {
         bg-gradient-to-r from-[#003366] to-[#000000]
         flex justify-center
         text-white
-        pt-[92px]
+      
       "
     >
       <div
@@ -34,6 +34,7 @@ const Hero = () => {
       >
         {/* Left Content */}
         <div className="max-w-[656px] text-center md:text-left">
+          
           <h1
             className="
               font-poppins font-bold text-[36px] sm:text-[48px] md:text-[64px]
