@@ -4,6 +4,7 @@ import director from "../assets/director.jpg";
 import principal from "../assets/principal.jpg";
 import hscience from "../assets/hscience.jpg";
 import hteacher from "../assets/hteacher.jpg";
+import english from "../assets/english.jpg"
 
 
 const OurTeam = () => {
@@ -12,37 +13,37 @@ const OurTeam = () => {
       img: chairman,
       name: "Mr E.B Chira",
       role: "Chairman",
-      desc: "An experienced educator dedicated to academic excellence and student growth.",
+      desc: "A distinguished educational leader committed to advancing academic excellence, professional standards, and sustainable institutional growth..",
     },
     {
       img: director,
       name: "Mrs. Justina Ekene Chira",
       role: "Director",
-      desc: "Leads our curriculum innovation and teacher development initiatives.",
+      desc: "A visionary leader committed to advancing academic excellence and organizational growth.",
     },
     {
       img: principal,
       name: "Mr Godswill Uche Chira",
       role: "Principal",
-      desc: "Passionate about inspiring curiosity through practical scientific learning.",
+      desc: "A transformational principal focused on raising standards and inspiring student success.",
     },
     {
       img: hteacher,
-      name: "Mr. John Bello",
-      role: "Sports Coordinator",
-      desc: "Encourages teamwork, discipline, and excellence through athletics.",
+      name: "Mrs. Jennifer Philiyan Bariya",
+      role: "Head Teacher",
+      desc: "A seasoned educator focused on strengthening teaching quality and student development.",
     },
     {
       img: hscience,
-      name: "Mrs. Esther Nnamdi",
+      name: "Mrs. Juliana Yusuf",
       role: "Arts Director",
       desc: "Drives creativity and cultural appreciation across the arts programs.",
     },
     {
-      img: hscience,
-      name: "Mr. Daniel Yusuf",
-      role: "IT Administrator",
-      desc: "Ensures smooth digital learning experiences with modern technologies.",
+      img:english,
+      name: "Mrs. Peace Maina",
+      role: "HOD English & Languages",
+      desc: "A passionate English specialist committed to raising linguistic standards and inspiring confident learners.",
     },
   ];
 

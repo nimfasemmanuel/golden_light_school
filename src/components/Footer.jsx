@@ -14,11 +14,11 @@ const Footer = () => {
             Golden Light School
           </h2>
           <p className="font-poppins font-normal text-[16px] leading-[24px] mb-3">
-            Nurturing excellence, inspiring futures, and building character since 1985.
+            Nurturing excellence, inspiring futures, and building character since 2000.
           </p>
           <p className="font-poppins font-normal text-[16px] leading-[24px]">
-            123 Education Lane <br />
-            Golden Light, CA 90210
+           Sabuwar Takur Adua, 720101  <br />
+            Dutse , Jigawa State
           </p>
         </div>
 
@@ -28,11 +28,11 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-2 font-poppins text-[16px] leading-[24px]">
-            <li><a href="#about" className="hover:text-blue-400">About Us</a></li>
-            <li><a href="#academics" className="hover:text-blue-400">Academic Programs</a></li>
-            <li><a href="#facilities" className="hover:text-blue-400">Facilities</a></li>
-            <li><a href="#news" className="hover:text-blue-400">News & Events</a></li>
-            <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
+            <li><a href="/about" className="hover:text-blue-400">About Us</a></li>
+            <li><a href="/academics" className="hover:text-blue-400">Academic Programs</a></li>
+            <li><a href="/admission" className="hover:text-blue-400">Admission</a></li>
+            <li><a href="/gallery" className="hover:text-blue-400">Gallery</a></li>
+            <li><a href="/contact" className="hover:text-blue-400">Contact</a></li>
           </ul>
         </div>
 
@@ -43,8 +43,8 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 font-poppins text-[16px] leading-[24px]">
             <li><a href="#student-portal" className="hover:text-blue-400">Student Portal</a></li>
-            <li><a href="#parent-resources" className="hover:text-blue-400">Parent Resources</a></li>
-            <li><a href="#faculty" className="hover:text-blue-400">Faculty & Staff</a></li>
+            <li><a href="#parent-resource" className="hover:text-blue-400">Parent Resources</a></li>
+            <li><a href="/about" className="hover:text-blue-400">Faculty & Staff</a></li>
             <li><a href="#alumni" className="hover:text-blue-400">Alumni</a></li>
             <li><a href="#calendar" className="hover:text-blue-400">Calendar</a></li>
           </ul>
@@ -65,10 +65,10 @@ const Footer = () => {
             info@goldenlightschool.edu
           </p>
           <div className="flex items-center gap-4">
-            <FaFacebookF className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" />
-            <FaTwitter className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" />
-            <FaInstagram className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" />
-            <FaYoutube className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" />
+          <a href="https://web.facebook.com/goldenlightschool" target="_blank"><FaFacebookF className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" /></a>
+            <a href="https://twitter.com/goldenlight_sch" target="_blank"><FaTwitter className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" /></a>
+            <a href="https://www.instagram.com/officialgoldenlight_sch/" target="_blank"><FaInstagram className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" /></a>
+            <a href="https://www.youtube.com/@goldenlightschool5504" target="_blank"><FaYoutube className="w-[24px] h-[24px] cursor-pointer hover:text-blue-400" /></a>
           </div>
         </div>
       </div>

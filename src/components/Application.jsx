@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import school from "../assets/school.jpg";
 
 const Application = () => {
+  // State to track selected class
+  const [selectedClass, setSelectedClass] = useState("");
+
+  // Optional: function to handle Apply button click
+  const handleApply = () => {
+    // Here you can send selectedClass and other form data to backend
+    console.log("Selected Class:", selectedClass);
+    alert(`You applied for: ${selectedClass || "No class selected"}`);
+  };
+
   return (
     <section
       id="application"
@@ -60,7 +70,7 @@ const Application = () => {
         </div>
       </div>
 
-      {/* Application Form & Contact Section (merged design) */}
+      {/* Application Form & Contact Section */}
       <div className="flex flex-col lg:flex-row justify-center gap-[40px] w-full max-w-[1200px]">
         {/* Left - Application Form */}
         <div className="bg-[#E6F7FB] rounded-[8px] shadow-md w-full lg:w-[610px] p-[40px] flex flex-col gap-[20px]">
@@ -112,7 +122,12 @@ const Application = () => {
                 <button
                   key={index}
                   type="button"
-                  className="px-[20px] py-[10px] rounded-full border border-[#00AEEF] text-[14px] font-poppins text-[#003366] bg-white hover:bg-[#003366] hover:text-white transition-all"
+                  onClick={() => setSelectedClass(level)}
+                  className={`px-[20px] py-[10px] rounded-full border border-[#00AEEF] text-[14px] font-poppins transition-all ${
+                    selectedClass === level
+                      ? "bg-[#003366] text-white"
+                      : "bg-white text-[#003366] hover:bg-[#003366] hover:text-white"
+                  }`}
                 >
                   {level}
                 </button>
@@ -120,100 +135,106 @@ const Application = () => {
             )}
           </div>
 
-          <button className="mt-4 active:opacity-70 bg-[#00AEEF] text-white font-poppins font-medium text-[16px] leading-[24px] px-6 py-3 rounded-[8px] hover:opacity-90 transition-opacity w-full">
+          <button
+            onClick={handleApply}
+            className="mt-4 active:opacity-70 bg-[#00AEEF] text-white font-poppins font-medium text-[16px] leading-[24px] px-6 py-3 rounded-[8px] hover:opacity-90 transition-opacity w-full"
+          >
             Apply
           </button>
         </div>
 
-        {/* Right - Contact Info (styled like Contact Us) */}
+        {/* Right - Contact Info */}
         <div className="flex flex-col  lg:flex-row justify-center gap-[40px] w-full">
-                {/* Left Card - Contact Details */}
-                <div className="bg-[#E6F7FB] rounded-[8px] shadow-md w-full lg:w-[610px] p-[40px] flex flex-col gap-[32px]">
-                  <h3 className="text-[#003366] font-poppins font-semibold text-[24px] leading-[32px]">
-                    Get in Touch
-                  </h3>
-        
-                  {/* Address */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
-                      <FaMapMarkerAlt className="text-[#00AEEF] text-[20px]" />
-                    </div>
-                    <div>
-                      <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
-                        Address
-                      </h4>
-                      <p className="font-poppins text-[16px] text-[#334155]">123 Education Lane</p>
-                      <p className="font-poppins text-[16px] text-[#334155]">Golden Light, CA 90210</p>
-                    </div>
-                  </div>
-        
-                  {/* Phone */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
-                      <FaPhone className="text-[#00AEEF] text-[20px]" />
-                    </div>
-                    <div>
-                      <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
-                        Phone
-                      </h4>
-                      <p className="font-poppins text-[16px] text-[#334155]">(555) 123-4567</p>
-                    </div>
-                  </div>
-        
-                  {/* Email */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
-                      <FaEnvelope className="text-[#00AEEF] text-[20px]" />
-                    </div>
-                    <div>
-                      <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
-                        Email
-                      </h4>
-                      <p className="font-poppins text-[16px] text-[#334155]">
-                        admissions@goldenlightschool.edu
-                      </p>
-                    </div>
-                  </div>
-        
-                  {/* Office Hours */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
-                      <FaClock className="text-[#00AEEF] text-[20px]" />
-                    </div>
-                    <div>
-                      <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
-                        Office Hours
-                      </h4>
-                      <p className="font-poppins text-[16px] text-[#334155]">
-                        Monday - Friday: 8:00 AM - 4:30 PM
-                      </p>
-                      <p className="font-poppins text-[16px] text-[#334155]">
-                        Saturday: 9:00 AM - 12:00 PM
-                      </p>
-                    </div>
-                  </div>
-        
-                  {/* Social Links */}
-                  <div className="pt-4">
-                    <h4 className="font-poppins font-bold text-[14px] leading-[26px] text-[#003366] mb-3">
-                      Follow Us
-                    </h4>
-                    <div className="flex gap-3">
-                      <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
-                        <FaFacebookF className="text-white text-[18px]" />
-                      </div>
-                      <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
-                        <FaXTwitter className="text-white text-[18px]" />
-                      </div>
-                      <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
-                        <FaInstagram className="text-white text-[18px]" />
-                      </div>
-                      <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
-                        <FaYoutube className="text-white text-[18px]" />
-                      </div>
-                    </div>
-                  </div>
+          <div className="bg-[#E6F7FB] rounded-[8px] shadow-md w-full lg:w-[610px] p-[40px] flex flex-col gap-[32px]">
+            <h3 className="text-[#003366] font-poppins font-semibold text-[24px] leading-[32px]">
+              Get in Touch
+            </h3>
+
+            {/* Address */}
+            <div className="flex items-start gap-4">
+              <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
+                <FaMapMarkerAlt className="text-[#00AEEF] text-[20px]" />
+              </div>
+              <div>
+                <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
+                  Address
+                </h4>
+                <p className="font-poppins text-[16px] text-[#334155]">
+                  Sabuwar Takur Adua, 720101, 
+                </p>
+                <p className="font-poppins text-[16px] text-[#334155]">
+                  Dutse, Jigawa State
+                </p>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-start gap-4">
+              <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
+                <FaPhone className="text-[#00AEEF] text-[20px]" />
+              </div>
+              <div>
+                <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
+                  Phone
+                </h4>
+                <p className="font-poppins text-[16px] text-[#334155]">+234 9121105066</p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
+                <FaEnvelope className="text-[#00AEEF] text-[20px]" />
+              </div>
+              <div>
+                <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
+                  Email
+                </h4>
+                <p className="font-poppins text-[16px] text-[#334155]">
+                  goldenlightschool009@gmail.com
+                </p>
+              </div>
+            </div>
+
+            {/* Office Hours */}
+            <div className="flex items-start gap-4">
+              <div className="w-[50px] h-[50px] rounded-full bg-[#E6F7FB] flex items-center justify-center">
+                <FaClock className="text-[#00AEEF] text-[20px]" />
+              </div>
+              <div>
+                <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
+                  Office Hours
+                </h4>
+                <p className="font-poppins text-[16px] text-[#334155]">
+                  Monday - Friday: 8:00 AM - 4:30 PM
+                </p>
+                <p className="font-poppins text-[16px] text-[#334155]">
+                  Saturday: 9:00 AM - 12:00 PM
+                </p>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="pt-4">
+              <h4 className="font-poppins font-bold text-[14px] leading-[26px] text-[#003366] mb-3">
+                Follow Us
+              </h4>
+              <div className="flex gap-3">
+                <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
+                  <a href="https://web.facebook.com/goldenlightschool" target="_blank"><FaFacebookF className="text-white text-[18px]" /></a>
                 </div>
+                <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
+                  <a href="https://twitter.com/goldenlight_sch" target="_blank"><FaXTwitter className="text-white text-[18px]" /></a>
+                </div>
+                <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
+                <a href="https://www.instagram.com/officialgoldenlight_sch/" target="_blank"><FaInstagram className="text-white text-[18px]" /></a>
+                </div>
+                <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
+                 <a href="https://www.youtube.com/@goldenlightschool5504" target="_blank"><FaYoutube className="text-white text-[18px]" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

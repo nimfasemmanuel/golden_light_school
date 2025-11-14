@@ -39,8 +39,8 @@ const ContactForm = () => {
               <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
                 Address
               </h4>
-              <p className="font-poppins text-[16px] text-[#334155]">123 Education Lane</p>
-              <p className="font-poppins text-[16px] text-[#334155]">Golden Light, CA 90210</p>
+              <p className="font-poppins text-[16px] text-[#334155]">Sabuwar Takur Adua, 720101 Dutse , Jigawa State</p>
+              <p className="font-poppins text-[16px] text-[#334155]"></p>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const ContactForm = () => {
               <h4 className="font-poppins font-bold text-[18px] leading-[26px] text-[#003366]">
                 Phone
               </h4>
-              <p className="font-poppins text-[16px] text-[#334155]">(555) 123-4567</p>
+              <p className="font-poppins text-[16px] text-[#334155]">+234 9121105066</p>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 Email
               </h4>
               <p className="font-poppins text-[16px] text-[#334155]">
-                admissions@goldenlightschool.edu
+                goldenlightschool009@gmail.com
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ const ContactForm = () => {
             </h4>
             <div className="flex gap-3">
               <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
-                <FaFacebookF className="text-white text-[18px]" />
+                <a href="https://web.facebook.com/goldenlightschool" target="_blank"><FaFacebookF className="text-white text-[18px]" /></a>
               </div>
               <div className="w-[44px] h-[44px] rounded-full bg-[#00AEEF] flex items-center justify-center cursor-pointer hover:opacity-90 transition">
                 <FaXTwitter className="text-white text-[18px]" />

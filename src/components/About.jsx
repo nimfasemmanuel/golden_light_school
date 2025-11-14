@@ -1,6 +1,6 @@
 import React from "react";
 import { motion }   from "framer-motion";
-import family from "../assets/family.svg";
+import img17 from "../assets/img17.jpg";
 
 const About = () => {
   return (
@@ -54,7 +54,7 @@ const About = () => {
 
             {/* Image */}
             <img
-              src={family}
+              src={img17}
               alt="About Section"
               className="w-full h-full object-cover rounded-[10px] pt-8 relative z-10"
             />
