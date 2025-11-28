@@ -1,6 +1,6 @@
 import React from "react";
-import { motion }   from "framer-motion";
-import img17 from "../assets/img17.jpg";
+import { motion } from "framer-motion";
+import image2 from "../assets/family.svg";
 
 const About = () => {
   return (
@@ -54,7 +54,7 @@ const About = () => {
 
             {/* Image */}
             <img
-              src={img17}
+              src={image2}
               alt="About Section"
               className="w-full h-full object-cover rounded-[10px] pt-8 relative z-10"
             />
@@ -73,12 +73,15 @@ const About = () => {
               <h1 className="font-poppins font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] mb-2 text-[#00AEEF]">
                 Our Story
               </h1>
-              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
-">
+              <p
+                className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
+"
+              >
                 Founded in 2000, Golden Light School has been a cornerstone of
                 educational excellence in our community for over 20 years. Our
-                commitment to academic rigor, character development, and holistic
-                education has made us one of the leading schools in the region.
+                commitment to academic rigor, character development, and
+                holistic education has made us one of the leading schools in the
+                region.
               </p>
             </div>
 
@@ -87,21 +90,25 @@ const About = () => {
               <h1 className="font-poppins font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] mb-2 text-[#00AEEF]">
                 Mission
               </h1>
-              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
-">
+              <p
+                className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
+"
+              >
                 We strive to provide a supportive and challenging educational
                 environment that empowers students to become thoughtful,
                 responsible, and successful citizens prepared for the challenges
                 of higher education and beyond.
               </p>
-            </div>  
-               {/* Our Vision */}
+            </div>
+            {/* Our Vision */}
             <div>
               <h1 className="font-poppins font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] mb-2 text-[#00AEEF]">
                 Vision
               </h1>
-              <p className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
-">
+              <p
+                className="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] sm:leading-[26px] text-gray-600 text-left
+"
+              >
                 We strive to provide a supportive and challenging educational
                 environment that empowers students to become thoughtful,
                 responsible, and successful citizens prepared for the challenges

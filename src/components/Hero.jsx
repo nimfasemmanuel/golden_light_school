@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import creche1 from "../assets/creche1.jpg";
-import creche2 from "../assets/creche2.jpg";
-import img17 from "../assets/img17.jpg";
-import sec21 from "../assets/sec21.jpg";
-import nursery1 from "../assets/nursery1.jpg";
-import nursery2 from "../assets/nursery2.jpg";
+// import creche1 from "../assets/creche1.jpg";
+// import creche2 from "../assets/creche2.jpg";
+// import img17 from "../assets/img17.jpg";
+// import sec21 from "../assets/sec21.jpg";
+// import nursery1 from "../assets/nursery1.jpg";
+// import nursery2 from "../assets/nursery2.jpg";
 
 const Hero = () => {
-  const images = [img17, sec21, creche1, creche2, nursery1 ,nursery2,];
+   const images = [/*img17, sec21, creche1, creche2, nursery1 ,nursery2,*/];
   const [current, setCurrent] = useState(0);
 
   const subText = "Shaping Bright Minds for a Greater Future";
