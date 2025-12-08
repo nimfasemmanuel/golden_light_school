@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="flex items-center gap-2 mb-3">
             <FaPhoneAlt className="text-red-500 w-[24px] h-[24px]" />
             <p className="font-poppins font-normal text-[16px] leading-[24px]">
-              (555) 123-4567
+             +234 9121105066git com
             </p>
           </div>
           <p className="font-poppins font-normal text-[16px] leading-[24px] mb-6">
